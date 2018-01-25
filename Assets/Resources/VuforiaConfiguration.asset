@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2067402452, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: VuforiaConfiguration
+  m_EditorClassIdentifier: 
+  vuforia:
+    vuforiaLicenseKey: AeWkJ7T/////AAAAGagOioY5QEGWqZDVVZzfb4tE9ZsJ7QjDLiJrgJmo5gUWGAFaSPMG05NyxOARLXVz3PQ1XE743tgJoRMPG7amWVxWXmc9jUt7qodcCvWtc1fgtDWJiF1XGBjdVkoqucI3qWcIhIDPkRPagMIdQ29QhIUkmidm6BaBz0m2dPs8T0gDxq+ejF0ti98LVSXANEE7rGZiSWpvErzrXKVh3XTHB9WpR5Za8Uyy5eW4OdQgr6p7lib4YA/s9lKjrI/pRAe6qV3wTOOKJRxUART041z9S2CwO2lyV0Gygg02jjySyhcLai0ghBR7kD+e3iQkEks4w2Ugsl8QlUpa7DSzp+a/WdWaA8tDUCUmbDnBesZ4YgXT
+    ufoLicenseKey: QWUzTGhQYi8vLy8vQUFBQUtORjU2R3pUQTBhUGlnNm5Zc2w5d3FzcC92Wk5ybVNLNGd0VHRiZWJ5OEQwaXNsN0l1a3BiL1JOT0JtWHBWNnZpWDR0c3pXaE5ZaXNyTFEyOHg5MksvZyt1U2Q1bCtuYmNtU2RkajlrdVAzdVg0eU9rbUliYWoxanJ2eWFRZEx4dWtBVTdpajZBQy9UMDVIa25leThMWWpRZzJMeHh6NUp0eDV0dSt3Z3N6VHBYeFNBUk90c0NzNXh5OThGczBQUGVYSHg1YWV1WU1oLzFjTnZ4Z3RodFFWTlJRaGRlNklnNk0xNGhlWHE4N0RMZWlWeUJnbE1ucHNIa3RxQW10QkpJbGZzVFhObTVOQTVwNi9xeTNaaHowY1hEL0pndW5lcTlOaGs5RjBmUk5EMm5TbVFpV29pTHlDQlg3RFZqRDZESkUvZmUzaEFoQmFMcksralNBRTNzUlZ2SG5TbTJkdWRPYWo5dzNvR2d3aGk=
+    delayedInitialization: 0
+    cameraDeviceModeSetting: -1
+    maxSimultaneousImageTargets: 1
+    maxSimultaneousObjectTargets: 1
+    useDelayedLoadingObjectTargets: 0
+    cameraDirection: 0
+    mirrorVideoBackground: 0
+  digitalEyewear:
+    cameraOffset: 0.06
+    distortionRenderingLayer: 31
+    eyewearType: 0
+    stereoFramework: 0
+    seeThroughConfiguration: 0
+    viewerName: 
+    viewerManufacturer: 
+    useCustomViewer: 0
+    customViewer:
+      Version: 0
+      Name: 
+      Manufacturer: 
+      ButtonType: 0
+      ScreenToLensDistance: 0
+      InterLensDistance: 0
+      TrayAlignment: 0
+      LensCenterToTrayDistance: 0
+      DistortionCoefficients: {x: 0, y: 0}
+      FieldOfView: {x: 0, y: 0, z: 0, w: 0}
+      ContainsMagnet: 0
+  databaseLoad:
+    dataSetsToLoad:
+    - ArBook
+    dataSetsToActivate:
+    - ArBook
+  videoBackground:
+    clippingMode: 0
+    numDivisions: 2
+    videoBackgroundShader: {fileID: 15311, guid: 0000000000000000f000000000000000,
+      type: 0}
+    matteShader: {fileID: 15310, guid: 0000000000000000f000000000000000, type: 0}
+    videoBackgroundEnabled: 1
+  smartTerrainTracker:
+    autoInitTracker: 0
+    autoStartTracker: 0
+    autoInitBuilder: 0
+    sceneUnitsToMillimeter: 0
+  deviceTracker:
+    autoInitTracker: 0
+    autoStartTracker: 0
+    trackingMode: 0
+    posePrediction: 0
+    modelCorrectionMode: 0
+    modelTransformEnabled: 0
+    modelTransform: {x: 0, y: 0.1, z: -0.1}
+  webcam:
+    deviceNameSetInEditor: Lenovo EasyCamera
+    flipHorizontally: 0
+    turnOffWebCam: 0
+    renderTextureLayer: 30
