@@ -21,6 +21,11 @@ public class AllAppear : MonoBehaviour, ITrackableEventHandler
     GameObject bala;
     GameObject canv;
 
+    public static bool isFinishedFirst = false;
+    public static bool isFinishedSecond = false;
+    public static bool isFinishedThird = false;
+
+
     public static bool isFound = false;
     public Animation aniBala;
     public Animator aniDoor;
@@ -38,7 +43,7 @@ public class AllAppear : MonoBehaviour, ITrackableEventHandler
     void Start()
     {
         canv = GameObject.Find("Canvas");
-        bala = GameObject.Find("balal_shalsky");
+        bala = GameObject.Find("balal_shalsky1");
         animatorBala = bala.GetComponent<Animator>();
         door = GameObject.Find("Door1");
         all = GameObject.Find("All");
@@ -66,12 +71,14 @@ public class AllAppear : MonoBehaviour, ITrackableEventHandler
     TrackableBehaviour.Status previousStatus,
     TrackableBehaviour.Status newStatus)
     {
-
         camPos = Camera.main.gameObject.transform.position;
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
+            all.transform.localScale = new Vector3(1F, 1F, 1F);
+
+            isFinishedFirst = false;
             canv.SetActive(false);
             aniDoor.SetBool("isFound", true);
             isFound = true;
@@ -103,6 +110,23 @@ public class AllAppear : MonoBehaviour, ITrackableEventHandler
     }
     void Update()
     {
+        if (!aniAll.isPlaying && isFinishedFirst)
+        {
+            camPos = Camera.main.gameObject.transform.position;
+            if ((camPos.z > -239) && (camPos.x > -228))
+            {
+                aniAll.Play("ani_all_shy_close");
 
+            }
+            else if ((camPos.z > 190) && (camPos.x < -228))
+            {
+
+                aniAll.Play("ani_all_shy_close");
+            }
+            else
+            {
+                aniAll.Play("ani_all_bats_close");
+            }
+        }
     }
 }
